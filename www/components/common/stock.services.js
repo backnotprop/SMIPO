@@ -16,6 +16,7 @@ angular.module('stock.services', [])
 
                 $http.get(url)
                     .success(function (data) {
+                        console.log(data);
                         deferred.resolve(data);
                     });
 

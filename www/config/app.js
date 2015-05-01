@@ -39,14 +39,7 @@ angular.module('appMain', ['ngMaterial', 'ui.router', 'members', 'stocks', 'welc
         .state('welcome', {
             url: '/welcome',
             templateUrl: 'components/welcome/welcome.html',
-            controller: 'WelcomeCtrl',
-            resolve: {
-                resStocks: function (StockFactory) {
-                    return StockFactory.grabStocks().then(function (data) {
-                        return data.query;
-                    });
-                }
-            }
+            controller: 'WelcomeCtrl'
         });
 
 

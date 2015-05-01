@@ -10,7 +10,7 @@ md-toolbar h1 {
     background-color: #fff;
     border-top: 1px solid #ccc;
     width: 100%;
-    position: absolute;
+
     left: 0;
     background-color: black;
 }
@@ -18,9 +18,9 @@ md-toolbar h1 {
 #carousel div {
     text-align: center;
     width: 100px;
-    height: 50px;
+    min-height: 50px;
     float: left;
-    position: relative;
+
     color: white;
 }
 #carousel div img {
@@ -40,4 +40,24 @@ md-toolbar h1 {
     bottom: 30px;
     left: 50%;
     border-radius: 3px;
+}
+#topBar{
+    background-color: white;
+    color: black;
+}
+
+.upPrice{
+    color: lawngreen;
+}
+.downPrice{
+    color: red;
+}
+#cover{
+    background-image: url("../img/cover1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    min-height: 25em;
+
+
 }

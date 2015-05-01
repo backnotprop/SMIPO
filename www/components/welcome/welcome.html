@@ -1,66 +1,211 @@
 <div id="wrapper">
     <div id="carousel">
-
         <div class="stock-bar-item">
-            <span>Stock Name1</span>
+            <span>AAPL</span>
+            <br/>
+            <span>100.01</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name2</span>
+            <span>GOOG</span>
+            <br/>
+            <span>267.91</span>
+            <span class="downPrice">.4%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name3</span>
+            <span>HLTH</span>
+            <br/>
+            <span>68.21</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name4</span>
+            <span>IMH</span>
+            <br/>
+            <span>33.44</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name5</span>
+            <span>EGRX</span>
+            <br/>
+            <span>131.21</span>
+            <span class="downPrice">.4%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name6</span>
+            <span>CEMP</span>
+            <br/>
+            <span>56.84</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name7</span>
+            <span>BLUE</span>
+            <br/>
+            <span>104.03</span>
+            <span class="downPrice">.4%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name8</span>
+            <span>PCYC</span>
+            <br/>
+            <span>34.21</span>
+            <span class="downPrice">.4%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name9</span>
+            <span>AMBA</span>
+            <br/>
+            <span>73.71</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name10</span>
+            <span>HCHC</span>
+            <br/>
+            <span>34.11</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name11</span>
+            <span>CEA</span>
+            <br/>
+            <span>81.02</span>
+            <span class="downPrice">.4%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name12</span>
+            <span>FOLD</span>
+            <br/>
+            <span>134.99</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name13</span>
+            <span>ADPT</span>
+            <br/>
+            <span>22.93</span>
+            <span class="downPrice">.4%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name14</span>
+            <span>WLDN</span>
+            <br/>
+            <span>65.82</span>
+            <span class="upPrice">.2%</span>
         </div>
 
         <div class="stock-bar-item">
-            <span>Stock Name15</span>
+            <span>HSKA</span>
+            <br/>
+            <span>112.32</span>
+            <span class="upPrice">.2%</span>
         </div>
 
+        <div class="stock-bar-item">
+            <span>AMBA</span>
+            <br/>
+            <span>73.71</span>
+            <span class="upPrice">.2%</span>
+        </div>
+
+        <div class="stock-bar-item">
+            <span>HCHC</span>
+            <br/>
+            <span>34.11</span>
+            <span class="upPrice">.2%</span>
+        </div>
+
+        <div class="stock-bar-item">
+            <span>CEA</span>
+            <br/>
+            <span>81.02</span>
+            <span class="downPrice">.4%</span>
+        </div>
+
+        <div class="stock-bar-item">
+            <span>PCYC</span>
+            <br/>
+            <span>34.21</span>
+            <span class="downPrice">.4%</span>
+        </div>
+
+        <div class="stock-bar-item">
+            <span>AMBA</span>
+            <br/>
+            <span>73.71</span>
+            <span class="upPrice">.2%</span>
+        </div>
 
     </div>
 </div>
+
+
+
+<div>
+    <div id="cover"></div>
+    <md-content class="md-padding" layout-align-gt-sm="center">
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="SMIPO" layout-align-gt-sm="center">
+                <md-content class="md-padding">
+                    <img style="float:right" src="img/radford_logo.png" height="35px" />
+                    <h1 class="md-display-2">About SMIPO</h1>
+                    <p>Our goal is to allow students at Radford University an opportunity to gain practical experience in
+                        the management and decision-making processes of a corporate structured organization by participating in hands-on management of the funds of Radford University
+                        Foundation’s endowment to the Student Management Investment Portfolio Organization.</p>
+                </md-content>
+            </md-tab>
+            <md-tab label="Who We Are">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">Current Members</h1>
+                    <a ui-sref="members">Search Alumni</a>
+                    <p>We are some of Radford's best and brightest. We simply love what SMIPO offers us!</p>
+                    <em>view current members below</em>
+
+
+                    <br />
+                    <a ng-click="addMem = !addMem"><strong class="text-info">Add New Member</strong></a>
+                    <br />
+                    <br />
+                    <form ng-show="addMem" role="form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control"  placeholder="Enter Project Name" ng-model="mem.fullname">
+                        </div>
+                        <div class="form-group">
+                            <label>Class Year</label>
+                            <input type="text" class="form-control"  placeholder="Enter Project Name" ng-model="mem.classyear">
+                        </div>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control"  placeholder="Enter Number" ng-model="mem.title">
+                        </div>
+                        <div class="form-group">
+                            <label>Photo File</label>
+                            <input type="text" class="form-control"  placeholder="Enter Photo File Name" ng-model="mem.pic">
+                        </div>
+
+                        <br />
+                        <button type="submit" class="btn btn-default" ng-click="memSub(mem)" >Submit</button>
+                    </form>
+
+
+
+
+                </md-content>
+            </md-tab>
+            <md-tab label="Numbers">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">Down to Business</h1>
+                    <p>TODO database input of important smipo numbers</p>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>
+
+
+<p class="md-toolbar-tools" layout-align-gt-sm="center">Student Managed Investment Portfolio - C 2015</p>

@@ -20,6 +20,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/smipo');
 
 // Require schemas
+var Alumni = require('./app/models/alumni');
 var Member = require('./app/models/member');
 
 // configure body parser
@@ -52,6 +53,53 @@ router.use(function(req, res, next){
 // Main Routes
 // ==========================================
 
+//--------------------------------------
+// Alumni Route
+//--------------------------------------
+router.route('/alumni')
+
+    // POST --------------------------
+    // post (overwrite here) new info
+    .post(function(req, res) {
+
+        // create new instance of the Member model
+        var alm = new Alumni();
+        alm.fullname = req.body.fullname,
+            alm.classyear = req.body.classyear,
+            alm.email = req.body.email,
+            alm.phone = req.body.phone,
+            alm.city = req.body.city;
+
+        // save member and check for errors
+        alm.save(function(err){
+            if(err) {
+                console.log("ERROR writing new member: " + err);
+                res.send("ERROR !");
+            }
+            // send back the written member info
+            res.json(alm);
+            console.log("new alumni POST written: " + alm);
+        });
+    })
+
+
+    // GET --------------------------
+    // get current info
+    .get(function(req, res){
+        // this function will return all the members
+        Alumni.find(function(err,alumns) {
+            if(err) {
+                console.log("alumni GET read error: " + err);
+                res.send(err);
+            }
+            res.json(alumns);
+        });
+
+    });
+
+//--------------------------------------
+// Current Members Route
+//--------------------------------------
 router.route('/member')
 
     // POST --------------------------
@@ -62,9 +110,8 @@ router.route('/member')
         var mem = new Member();
         mem.fullname = req.body.fullname,
             mem.classyear = req.body.classyear,
-            mem.email = req.body.email,
-            mem.phone = req.body.phone,
-            mem.city = req.body.city;
+            mem.title = req.body.title,
+            mem.pic = req.body.pic;
 
         // save member and check for errors
         mem.save(function(err){
@@ -88,11 +135,10 @@ router.route('/member')
                 console.log("member GET read error: " + err);
                 res.send(err);
             }
-            res.json(users);
+            res.json(members);
         });
 
     });
-
 // REGISTER OUR ROUTES --------------------------
 // all routes will be prefixed with /
 app.use('/', router);
