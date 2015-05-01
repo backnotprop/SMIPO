@@ -56,7 +56,7 @@ angular.module('welcome', [])
 
         $http.get(url)
             .success(function (data) {
-                $scope.myInfo = data;
+                $scope.memData = data;
             });
 
         // submit member
