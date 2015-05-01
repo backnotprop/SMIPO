@@ -115,8 +115,8 @@
           <file leaf-file-name="welcome.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/www/components/welcome/welcome.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5031056" vertical-offset="249" max-vertical-offset="1215">
-                  <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+                <state vertical-scroll-proportion="0.04658385" vertical-offset="0" max-vertical-offset="1215">
+                  <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -603,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/components/welcome/welcome.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5031056" vertical-offset="249" max-vertical-offset="1215">
-          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.04658385" vertical-offset="0" max-vertical-offset="1215">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
           <folding />
         </state>
       </provider>
