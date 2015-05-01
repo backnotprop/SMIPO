@@ -1,7 +1,7 @@
 angular.module('welcome', [])
 
-    .controller('WelcomeCtrl', ['$scope','$state','DataApiFactory', 'StockFactory',
-        function($scope, $state, DataApiFactory, StockFactory){
+    .controller('WelcomeCtrl', ['$http','$scope','$state','DataApiFactory', 'StockFactory',
+        function($scope, $state,$http, DataApiFactory, StockFactory){
 
 
         //-----------------------------------------------
@@ -51,7 +51,15 @@ angular.module('welcome', [])
 
         $scope.movingBar();
 
+        // grab members
+        var url = "/member";
 
+        $http.get(url)
+            .success(function (data) {
+                $scope.myInfo = data;
+                console.log(data);
+
+            });
 
         // submit member
         $scope.memSub = function(member) {
