@@ -1,6 +1,7 @@
 angular.module('welcome', [])
 
-    .controller('WelcomeCtrl', ['$scope', 'StockFactory',function($scope, StockFactory){
+    .controller('WelcomeCtrl', ['$scope','DataApiFactory', 'StockFactory',
+        function($scope, DataApiFactory, StockFactory){
 
 
         //-----------------------------------------------
@@ -55,7 +56,7 @@ angular.module('welcome', [])
         // submit member
         $scope.memSub = function(member) {
             var newMem = angular.copy(member);
-            ApiFactory.sendData(newMem, '/member').then(
+            DataApiFactory.sendData(newMem, '/member').then(
                 function (response) {
 
                     //alert response back (Should be success or failure)

@@ -1,4 +1,4 @@
-angular.module('appMain', ['ngMaterial', 'ui.router', 'members', 'stocks', 'welcome', 'stock.services'])
+angular.module('appMain', ['ngMaterial', 'ui.router', 'members', 'stocks', 'welcome', 'stock.services', 'data.api'])
 
 
 .run(['$rootScope', '$state', '$stateParams', function ($rootScope,   $state,   $stateParams) {
