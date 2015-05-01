@@ -167,12 +167,12 @@
 
                     <md-grid-list
                             md-cols-gt-md="5"
-                            md-row-height-gt-md="1:1" md-row-height="10:4"
+                            md-row-height-gt-md="1:1" md-row-height="10:2"
                             md-gutter="8px" md-gutter-gt-sm="4px" >
 
                         <md-grid-tile ng-repeat="m in memData">
                            <img src="../img/members/{{m.pic}}"/>
-                            <md-grid-tile-footer style="min-height: 80px;color:black">
+                            <md-grid-tile-footer style="min-height: 80px;color:red;font-weight: 500">
                                 <h3>{{m.fullname}}</h3>
                                 <h3>{{m.title}}</h3>
                                 <h3>{{m.classyear}}</h3>
