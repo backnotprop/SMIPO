@@ -1,7 +1,7 @@
 angular.module('welcome', [])
 
-    .controller('WelcomeCtrl', ['$http','$scope','$state','DataApiFactory', 'StockFactory',
-        function($scope, $state,$http, DataApiFactory, StockFactory){
+    .controller('WelcomeCtrl', ['$scope','$state','$http','DataApiFactory', 'StockFactory',
+        function($scope, $state, $http, DataApiFactory, StockFactory){
 
 
         //-----------------------------------------------
