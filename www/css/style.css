@@ -1,0 +1,43 @@
+md-toolbar h1 {
+    font-weight: normal;
+}
+
+.stock-bar-item{
+    border: 1px solid #999;
+}
+
+#wrapper {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: black;
+}
+
+#carousel div {
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    float: left;
+    position: relative;
+    color: white;
+}
+#carousel div img {
+    border: 1px solid #999;
+}
+#carousel div:hover span {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    width: 100px;
+    padding: 2px 0;
+    margin: 0 0 0 -50px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    border-radius: 3px;
+}
