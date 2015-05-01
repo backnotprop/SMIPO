@@ -13,7 +13,7 @@ var Schema = mongoose.Schema;
 var MemberSchema = new Schema({
     fullname: String,
     classyear: String,
-    email: String,-
+    email: String,
     phone: String,
     city: String
 });
